@@ -1,0 +1,261 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f3f6fb;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, #0f766e, #164e63);
+    color: #ffffff;
+    text-align: center;
+    padding: 50px 20px 35px;
+}
+
+header h1 {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    padding: 10px 16px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    background-color: #ffffff;
+    color: #164e63;
+}
+
+main {
+    width: min(1100px, 92%);
+    margin: 35px auto;
+}
+
+section, aside {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+    padding: 30px;
+    margin-bottom: 28px;
+}
+
+section h2 {
+    color: #164e63;
+    font-size: 26px;
+    margin-bottom: 18px;
+}
+
+#sobreMim {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.foto-perfil {
+    width: 190px;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #0f766e;
+    flex-shrink: 0;
+}
+
+#sobreMim p {
+    font-size: 17px;
+}
+
+#conhecimentos ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    list-style: none;
+}
+
+#conhecimentos li {
+    background-color: #ecfeff;
+    border-left: 5px solid #0f766e;
+    padding: 14px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+#projetos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+#projetos h2 {
+    grid-column: 1 / -1;
+}
+
+#projetoUm, #projetoDois {
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    background-color: #ffffff;
+    transition: 0.3s;
+}
+
+#projetoUm:hover, #projetoDois:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.12);
+}
+
+.imagem-pokemon, .imagem-hacker {
+    display: block;
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+#projetos h3 {
+    color: #0f766e;
+    font-size: 22px;
+    padding: 18px 18px 6px;
+}
+
+.informacoes-projeto {
+    padding: 0 18px 20px;
+}
+
+#extras {
+    width: min(1100px, 92%);
+    margin: 0 auto 28px;
+    text-align: center;
+}
+
+#extras p {
+    color: #164e63;
+    font-size: 21px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+#extras ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    list-style: none;
+}
+
+#extras a {
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #0f766e;
+    padding: 10px 18px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+#extras a:hover {
+    background-color: #164e63;
+}
+
+#rodape {
+    background-color: #0f172a;
+    color: #ffffff;
+    text-align: center;
+    padding: 24px 15px;
+}
+
+#rodape p {
+    font-size: 15px;
+}
+
+/*Parte responsiva do cÃ³digo*/
+@media (max-width: 768px) {
+    header {
+        padding: 38px 18px 28px;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .menu a {
+        width: 100%;
+    }
+
+    section, aside {
+        padding: 22px;
+    }
+
+    #sobreMim {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .foto-perfil {
+        width: 160px;
+        height: 160px;
+    }
+
+    #conhecimentos ul, #projetos {
+        grid-template-columns: 1fr;
+    }
+
+    .imagem-pokemon, .imagem-hacker {
+        height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    main,
+    #extras {
+        width: 94%;
+    }
+
+    header h1 {
+        font-size: 23px;
+    }
+
+    section h2 {
+        font-size: 22px;
+    }
+
+    #conhecimentos li {
+        font-size: 15px;
+    }
+}
+
